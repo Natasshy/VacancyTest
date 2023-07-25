@@ -25,7 +25,7 @@ public class VacancyTest extends BaseTest {
     @Test
     void describeVacancyShouldBeOnThePage() {
         open(baseUrl);
-        $(".t004").shouldBe(visible);
+        $(".t030__title").shouldBe(visible);
     }
 
     @Test
