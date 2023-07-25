@@ -1,3 +1,4 @@
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Condition.visible;
@@ -6,6 +7,7 @@ import static com.codeborne.selenide.Configuration.baseUrl;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.*;
 
+@Tag("simple")
 public class VacancyTest extends BaseTest {
 
     @Test
@@ -19,6 +21,7 @@ public class VacancyTest extends BaseTest {
         open(baseUrl);
         $(".t338__title").shouldHave(text("Middle QA engineer"));
     }
+
     @Test
     void describeVacancyShouldBeOnThePage() {
         open(baseUrl);
@@ -30,6 +33,7 @@ public class VacancyTest extends BaseTest {
         open(baseUrl);
         $(".t487__descr").shouldBe(visible);
     }
+
     @Test
     void mailShouldBeOnThePage() {
         open(baseUrl);
