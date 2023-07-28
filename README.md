@@ -52,7 +52,7 @@ ____
 
 ____
 <a id="jenkins"></a>
-## <img alt="Jenkins" height="25" src="images/logo/Jenkins.svg" width="25"/></a><a name="Сборка"></a>Сборка в [Jenkins](https://jenkins.autotests.cloud/job/Kod3ik_qa_guru_x5/)</a>
+## <img alt="Jenkins" height="25" src="images/logo/Jenkins.svg" width="25"/></a><a name="Сборка"></a>Сборка в [Jenkins](https://jenkins.autotests.cloud/job/qa_guru_20_jenkins_nataliaHavana_jenkins_vacancy_test/24/)</a>
 ____
 <p align="center">  
 <a href="https://jenkins.autotests.cloud/job/Kod3ik_qa_guru_x5/"><img src="images/screen/jenkins_build.png" alt="Jenkins" width="950"/></a>  
@@ -72,17 +72,21 @@ ____
 ___
 ***Локальный запуск:***
 ```bash  
-gradle clean X5Group_test
+gradle clean simple_test
 ```
 
 ***Удалённый запуск через Jenkins:***
 ```bash  
-clean X5Group_test
-"-Dbrowser=${browser}"
-"-DbrowserVersion=${browserVersion}"
-"-DbrowserSize=${browserSize}"
-"-DbaseUrl=${baseUrl}"
-"-DremoteUrl=${remoteUrl}"
+clean
+simple_test
+"-Dselenide.remote=https://user1:1234@selenoid.autotests.cloud/wd/hub"
+-DbaseUrl=${BASE_URL}
+-Dselenoid=${SELENOID}
+-Dbrowser=${BROWSER}
+-DbrowserSize=${BROWSER_SIZE}
+-DbrowserVersion=${BROWSER_VERSION}
+-Denvironment=${ENVIRONMENT}
+
 ```
 ___
 <a id="allure"></a>
@@ -113,33 +117,6 @@ ___
 <a id="allure-testops"></a>
 ## <img alt="Allure" height="25" src="images/logo/Allure2.svg" width="25"/></a>Интеграция с <a target="_blank" href="https://allure.autotests.cloud/project/2197/dashboards">Allure TestOps</a>
 ____
-### *Allure TestOps Dashboard*
-
-<p align="center">  
-<img title="Allure TestOps Dashboard" src="images/screen/allure_overview.png" width="850">  
-</p>  
-
-### *Ручные тест-кейсы*
-
-<p align="center">  
-<img title="Allure Tests" src="images/screen/manual_tests.png" width="850">  
-</p>
-
-### *Авто тест-кейсы*
-
-<p align="center">  
-<img title="Allure TestOps Tests" src="images/screen/allure_autotestsN.png" width="850">  
-</p>
-
-___
-<a id="jira"></a>
-## <img alt="Allure" height="25" src="images/logo/Jira.svg" width="25"/></a> Интеграция с <a target="_blank" href="https://jira.autotests.cloud/browse/HOMEWORK-682">Jira</a>
-____
-<p align="center">  
-<img title="Jira" src="images/screen/jira.png" width="850">  
-</p>
-
-____
 <a id="telegram"></a>
 ## <img alt="Allure" height="25" src="images/logo/Telegram.svg" width="25"/></a> Уведомление в Telegram при помощи бота
 ____
@@ -147,10 +124,4 @@ ____
 <img title="Allure Overview Dashboard" src="images/screen/telegram.png" width="550">  
 </p>
 
-____
-<a id="video"></a>
-## <img alt="Selenoid" height="25" src="images/logo/Selenoid.svg" width="25"/></a> Примеры видео выполнения тестов на Selenoid
-____
-<p align="center">
-<img title="Selenoid Video" src="images/video/x5.gif" width="550" height="350"  alt="video">   
-</p>
+ 
