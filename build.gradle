@@ -39,11 +39,12 @@ tasks.withType(JavaCompile) {
 
 test {
     useJUnitPlatform()
-}
-test {
-    useJUnitPlatform()
     systemProperties(System.getProperties())
 }
+tasks.withType(Test) {
+    systemProperties(System.getProperties())
+}
+
 task simple_test(type: Test) {
     useJUnitPlatform {
         includeTags("simple")
