@@ -1,4 +1,5 @@
 
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
@@ -13,6 +14,7 @@ import static com.codeborne.selenide.logevents.SelenideLogger.step;
 public class VacancyTest extends BaseTest {
 
     @Test
+    @DisplayName("Лого должно быть на странице")
     void logoMustBeOnThePage() {
         step("Open form", () -> {
             open(baseUrl);
@@ -23,6 +25,7 @@ public class VacancyTest extends BaseTest {
     }
 
     @Test
+    @DisplayName("Наименование вакансии должно QA")
     void nameOfVacancyMustBeQa() {
         step("Open form", () -> {
             open(baseUrl);
@@ -33,6 +36,7 @@ public class VacancyTest extends BaseTest {
     }
 
     @Test
+    @DisplayName("Описании вакансии должно быть на странице")
     void describeVacancyShouldBeOnThePage() {
         step("Open form", () -> {
             open(baseUrl);
@@ -43,6 +47,7 @@ public class VacancyTest extends BaseTest {
     }
 
     @Test
+    @DisplayName("Описание компании должно быть на странице")
     void describeCompanyShouldBeOnThePage() {
         step("Open form", () -> {
             open(baseUrl);
@@ -53,6 +58,7 @@ public class VacancyTest extends BaseTest {
     }
 
     @Test
+    @DisplayName("Контакная почта должна быть на странице")
     void mailShouldBeOnThePage() {
         step("Open form", () -> {
             open(baseUrl);
