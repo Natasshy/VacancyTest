@@ -16,7 +16,7 @@ public interface WebConfig extends Config {
     @DefaultValue("1920x1080")
     String getBrowserSize();
     @Key("baseUrl")
-    @DefaultValue("https://primekraft.ru")
+    @DefaultValue("https://career.level.travel/middle_qa")
     String getBaseUrl();
     @Key("remoteDriverUrl")
     String getRemoteUrl();
