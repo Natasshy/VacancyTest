@@ -1,10 +1,10 @@
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.WebDriverRunner;
 import com.codeborne.selenide.logevents.SelenideLogger;
-import config.WebConfig;
+
 import helpers.Attach;
 import io.qameta.allure.selenide.AllureSelenide;
-import org.aeonbits.owner.ConfigFactory;
+
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
@@ -13,16 +13,17 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import java.util.Map;
 
 public class BaseTest {
-    static WebConfig config = ConfigFactory.create(WebConfig.class, System.getProperties());
+
 
     @BeforeAll
-    static void init() {
-        Configuration.pageLoadStrategy = config.getPageLoadStrategy();
-        Configuration.browser = config.getBrowser();
-        Configuration.browserVersion = config.getBrowserVersion();
-        Configuration.browserSize = config.getBrowserSize();
-        Configuration.baseUrl = config.getBaseUrl();
-        Configuration.remote = config.getRemoteUrl();
+    static void beforeAll() {
+        Configuration.baseUrl = System.getProperty("baseUrl", "https://career.level.travel/middle_qa");
+        Configuration.pageLoadStrategy = "eager";
+        Configuration.browserSize = System.getProperty("browserSize", "1920x1080");
+        Configuration.browser = System.getProperty("browser", "chrome");
+        Configuration.remote = System.getProperty("selenoid");
+        Configuration.browserVersion = System.getProperty("browserVersion", "100.0");
+
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("selenoid:options", Map.of(
