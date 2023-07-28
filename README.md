@@ -112,10 +112,14 @@ ___
 
 <img title="Allure Graphics" src="images/screen/graphs.png" width="850">  
 </p>
+
 ____
 <a id="telegram"></a>
-## <img alt="Allure" height="25" src="Screenshot 2023-07-28 at 16.57.55.png" width="25"/></a> Уведомление в Telegram при помощи бота
+## <img alt="Allure" height="25" src="images/logo/Telegram.svg" width="25"/></a> Уведомление в Telegram при помощи бота
 ____
-  
+<p align="center">  
+<img title="Allure Overview Dashboard" src="images/screen/telegram.png" width="550">  
+</p>
 
+____
  
