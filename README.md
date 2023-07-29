@@ -104,7 +104,7 @@ ___
 ### *Графики*
 
   <p align="center">  
-<img title="Allure Graphics" src="media/logo/allure.png" width="850">
+ 
 
 <img title="Allure Graphics" src="media/sreen/allure_graphs.png" width="850">  
 </p>
