@@ -24,7 +24,8 @@ ____
 ## <a name="Технологии и инструменты">**Технологии и инструменты:**</a>
 
 <p align="center">  
-<a href="https://www.jetbrains.com/idea/"><img src="media/logo/idea.png" width="50" height="50"  alt="IDEA"/></a>  
+* <a href="https://www.jetbrains.com/idea/"><img src="media/logo/idea.png" width="50" height="50"  alt="IDEA"/></a>  
+  
 <a href="https://junit.org/junit5/"><img src="images/logo/junit5.png" width="50" height="50"  alt="JUnit 5"/></a>  
 <a href="https://gradle.org/"><img src="images/logo/gradle.png" width="50" height="50"  alt="Gradle"/></a>  
 <a href="https://selenide.org/"><img src="images/logo/selenide.png" width="50" height="50"  alt="Selenide"/></a>  
