@@ -19,7 +19,7 @@ public class VacancyTest extends BaseTest {
         step("Open form", () -> {
             open(baseUrl);
         });
-        step("Verify results", () -> {
+        step("Check logo on the page", () -> {
             $(".t339__blocklogo").shouldBe(visible);
         });
     }
@@ -30,7 +30,7 @@ public class VacancyTest extends BaseTest {
         step("Open form", () -> {
             open(baseUrl);
         });
-        step("Verify results", () -> {
+        step("Check name of vacancy", () -> {
             $(".t338__title").shouldHave(text("Middle QA engineer"));
         });
     }
@@ -41,7 +41,7 @@ public class VacancyTest extends BaseTest {
         step("Open form", () -> {
             open(baseUrl);
         });
-        step("Verify results", () -> {
+        step("Check describe of vacancy", () -> {
             $(".t030__title").shouldBe(visible);
         });
     }
@@ -52,7 +52,7 @@ public class VacancyTest extends BaseTest {
         step("Open form", () -> {
             open(baseUrl);
         });
-        step("Verify results", () -> {
+        step("Check describe of company", () -> {
             $(".t487__descr").shouldBe(visible);
         });
     }
@@ -63,7 +63,7 @@ public class VacancyTest extends BaseTest {
         step("Open form", () -> {
             open(baseUrl);
         });
-        step("Verify results", () -> {
+        step("Check contact email is available", () -> {
             $(".t551__contacts").shouldHave(text("joinus@level.travel"));
         });
     }
