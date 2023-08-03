@@ -76,7 +76,6 @@ gradle clean simple_test
 ```bash  
 clean
 simple_test
-"-Dselenide.remote=https://user1:1234@selenoid.autotests.cloud/wd/hub"
 -DbaseUrl=${BASE_URL}
 -Dselenoid=${SELENOID}
 -Dbrowser=${BROWSER}
