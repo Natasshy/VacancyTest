@@ -56,12 +56,13 @@ ____
 
 
 ### **Параметры сборки в Jenkins:**
-
-- *browser (браузер, по умолчанию chrome)*
-- *browserVersion (версия браузера, по умолчанию 100.0)*
-- *browserSize (размер окна браузера, по умолчанию 1920x1080)*
-- *baseUrl (адрес тестируемого веб-сайта)*
-- *remoteUrl (логин, пароль и адрес удаленного сервера Selenoid)*
+- *SELENOID (ссылка на Селиноид, по умолчанию https://user1:1234@selenoid.autotests.cloud/wd/hub)*
+- *BASE_URL (адрес тестируемого веб-сайта)*
+- *BROWSER (браузер, по умолчанию chrome)*
+- *BROWSER_VERSION (версия браузера, по умолчанию 100.0)*
+- *BROWSER_SIZE (размер окна браузера, по умолчанию 1920x1080)*
+- *ENVIRONMENT (окружение, по умолчанию ПРОД)*
+- *COMMENT (комментарий, по умолчанию пустой)*
 
 <a id="console"></a>
 ## Команды для запуска из терминала
@@ -86,35 +87,35 @@ simple_test
 ```
 ___
 <a id="allure"></a>
-## <img alt="Allure" height="25" src="images/logo/Allure.svg" width="25"/></a> <a name="Allure"></a>Allure [отчет](https://jenkins.autotests.cloud/job/Kod3ik_qa_guru_x5/allure/)</a>
+## <img alt="Allure" height="25" src="media/logo/allure.png" width="25"/></a> <a name="Allure"></a>Allure [отчет]([https://jenkins.autotests.cloud/job/Kod3ik_qa_guru_x5/allure/](https://jenkins.autotests.cloud/job/qa_guru_20_jenkins_nataliaHavana_jenkins_vacancy_test/29/allure/))</a>
 ___
 
 ### *Основная страница отчёта*
 
 <p align="center">  
-<img title="Allure Overview Dashboard" src="images/screen/jenkins.png" width="850">  
+<img title="Allure Overview Dashboard" src="media/sreen/allure_main.png" width="850">  
 </p>  
 
 ### *Тест-кейсы*
 
 <p align="center">  
-<img title="Allure Tests" src="images/screen/jenkins_tests.png" width="850">  
+<img title="Allure Tests" src="media/sreen/allure.png" width="850">  
 </p>
 
 ### *Графики*
 
   <p align="center">  
-<img title="Allure Graphics" src="images/screen/allure_graths.bmp" width="850">
+ 
 
-<img title="Allure Graphics" src="images/screen/graphs.png" width="850">  
+<img title="Allure Graphics" src="media/sreen/allure_graphs.png" width="850">  
 </p>
 
 ____
 <a id="telegram"></a>
-## <img alt="Allure" height="25" src="images/logo/Telegram.svg" width="25"/></a> Уведомление в Telegram при помощи бота
+## <img alt="Allure" height="25" src="media/logo/telegram.png" width="25"/></a> Уведомление в Telegram при помощи бота
 ____
 <p align="center">  
-<img title="Allure Overview Dashboard" src="images/screen/telegram.png" width="550">  
+<img title="Allure Overview Dashboard" src="media/sreen/telegram.png" width="550">  
 </p>
 
 ____
