@@ -119,4 +119,10 @@ ____
 </p>
 
 ____
- 
+
+ ## Видео примера запуска тестов в Selenoid
+
+К каждому тесту в отчете прилагается видео прогона.
+<p align="center">
+  <img title="Selenoid Video" src="media/video/23d02d5e987b1e7d5b64ee5044a41188.mp4">
+</p>
