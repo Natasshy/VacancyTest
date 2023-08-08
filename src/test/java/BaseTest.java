@@ -2,9 +2,11 @@ import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.WebDriverRunner;
 import com.codeborne.selenide.logevents.SelenideLogger;
 
+import config.WebConfig;
 import helpers.Attach;
 import io.qameta.allure.selenide.AllureSelenide;
 
+import org.aeonbits.owner.ConfigFactory;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
@@ -14,16 +16,18 @@ import java.util.Map;
 
 public class BaseTest {
 
+    static WebConfig config = ConfigFactory.create(WebConfig.class, System.getProperties());
 
     @BeforeAll
     static void beforeAll() {
-        Configuration.baseUrl = System.getProperty("baseUrl", "https://career.level.travel/middle_qa");
         Configuration.pageLoadStrategy = "eager";
-        Configuration.browserSize = System.getProperty("browserSize", "1920x1080");
-        Configuration.browser = System.getProperty("browser", "chrome");
-        Configuration.remote = System.getProperty("selenoid");
-        Configuration.browserVersion = System.getProperty("browserVersion", "100.0");
-
+        Configuration.baseUrl = config.baseUrl();
+        Configuration.browser = config.browser();
+        Configuration.browserVersion = config.browserVersion();
+        Configuration.browserSize = config.browserSize();
+        if (config.isRemote()) {
+            Configuration.remote = config.remoteUrl();
+        }
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("selenoid:options", Map.of(
