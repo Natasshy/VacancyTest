@@ -30,10 +30,12 @@ public class BaseTest {
         }
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
-        capabilities.setCapability("selenoid:options", Map.of(
-                "enableVNC", true,
-                "enableVideo", true
-        ));
+        if (config.isRemote()) {
+            capabilities.setCapability("selenoid:options", Map.of(
+                    "enableVNC", true,
+                    "enableVideo", true
+            ));
+        }
         Configuration.browserCapabilities = capabilities;
     }
 
